@@ -53,20 +53,20 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 // 0.0~1.0
-                float money= (float) animation.getAnimatedValue();
-                viewBinding.btnNavBack.setAlpha(money);
-                viewBinding.tvSearch.setAlpha(money);
-                viewBinding.rvList.getBackground().setAlpha((int) (255 * money));
+                float value= (float) animation.getAnimatedValue();
+                viewBinding.btnNavBack.setAlpha(value);
+                viewBinding.tvSearch.setAlpha(value);
+                viewBinding.rvList.getBackground().setAlpha((int) (255 * value));
                 // 搜索框宽度从100%到75%
-                lp.width = (int)(mWidth - (mWidth * 0.25 * money));
+                lp.width = (int)(mWidth - (mWidth * 0.25 * value));
                 mCurrWidth = lp.width;
                 viewBinding.searchContainer.setLayoutParams(lp);
                 // 搜索框父控件高度从100dp到56dp
-                lp3.height = (int)(mHeight - ((mHeight - dip2Px(56)) * money));
+                lp3.height = (int)(mHeight - ((mHeight - dip2Px(56)) * value));
                 mCurrHeight = lp3.height;
                 viewBinding.superContainer.setLayoutParams(lp3);
                 // 搜索框中间内容向左偏移
-                mCurrLeftMargin = (int) (mLeftMargin * money);
+                mCurrLeftMargin = (int) (mLeftMargin * value);
                 lp2.setMargins(- mCurrLeftMargin,0,0,0);
                 viewBinding.layoutSearch.setLayoutParams(lp2);
             }
@@ -97,15 +97,15 @@ public class SearchActivity extends AppCompatActivity {
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
-                float money= (float) animation.getAnimatedValue();
-                viewBinding.btnNavBack.setAlpha(money);
-                viewBinding.tvSearch.setAlpha(money);
-                viewBinding.rvList.getBackground().setAlpha((int) (255 * money));
-                lp.width = (int)(mCurrWidth + (mWidth * 0.25 * (1- money)));
+                float value= (float) animation.getAnimatedValue();
+                viewBinding.btnNavBack.setAlpha(value);
+                viewBinding.tvSearch.setAlpha(value);
+                viewBinding.rvList.getBackground().setAlpha((int) (255 * value));
+                lp.width = (int)(mCurrWidth + (mWidth * 0.25 * (1- value)));
                 viewBinding.searchContainer.setLayoutParams(lp);
-                lp3.height = (int)(mCurrHeight + ((mHeight - mCurrHeight) * (1- money)));
+                lp3.height = (int)(mCurrHeight + ((mHeight - mCurrHeight) * (1- value)));
                 viewBinding.superContainer.setLayoutParams(lp3);
-                lp2.setMargins((int) (-mCurrLeftMargin + mLeftMargin * (1- money)),0,0,0);
+                lp2.setMargins((int) (-mCurrLeftMargin + mLeftMargin * (1- value)),0,0,0);
                 viewBinding.layoutSearch.setLayoutParams(lp2);
             }
         });
