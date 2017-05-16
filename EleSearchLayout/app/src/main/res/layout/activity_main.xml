@@ -1,0 +1,58 @@
+<layout>
+    <LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:background="@color/colorTheme"
+            tools:context="com.lel.search.MainActivity">
+            <LinearLayout
+                android:id="@+id/searchContainer"
+                android:clickable="true"
+                android:background="@drawable/bg_white_r20"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/layoutSearch"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30">
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_magnifier_select"
+                        android:layout_margin="@dimen/dp_5"
+                        android:layout_width="@dimen/dp_16"
+                        android:layout_height="@dimen/dp_16"/>
+                    <TextView
+                        android:text="@string/search_shop_area"
+                        android:textSize="@dimen/sp_14"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorGray"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+</layout>

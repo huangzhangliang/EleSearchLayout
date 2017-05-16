@@ -1,0 +1,69 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:background="@color/colorTheme"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56">
+        <ImageButton
+            android:id="@+id/btnNavBack"
+            android:layout_width="@dimen/dp_56"
+            android:layout_height="@dimen/dp_56"
+            android:background="@drawable/btn_theme_selector"
+            android:padding="@dimen/dp_20"
+            android:scaleType="fitCenter"
+            android:alpha="0"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_back" />
+
+        <LinearLayout
+            android:id="@+id/searchContainer"
+            android:clickable="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_white_r20"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layoutSearch"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_magnifier_select"
+                    android:layout_margin="@dimen/dp_5"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"/>
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:hint="@string/search_shop_area"
+                    android:textSize="@dimen/sp_14"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorGray"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:text="@string/search"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/colorWhite"
+            android:alpha="0"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</layout>
